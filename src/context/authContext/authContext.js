@@ -1,18 +1,17 @@
 import { createContext,useContext, useEffect, useState } from "react";
-import Cookies from 'js-cookie'
 
 const Context =createContext();
-
 export const AuthProvider = ({children})=>{
-
     const [user, setUser] = useState(() => {
-        const storedUser = Cookies.get('name');
+        const storedUser = JSON.parse(localStorage.getItem('user'));
         return storedUser || false;
       });
-
-    const data ={user,setUser}
+    const data ={
+        user,
+        setUser
+    }
     useEffect(() => {
-        Cookies.set('user', JSON.stringify(user), { expires: 7, path: '' })
+        localStorage.setItem('user', JSON.stringify(user));
       }, [user]);
 
     return (
