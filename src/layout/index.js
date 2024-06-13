@@ -10,7 +10,7 @@ export function Layout({ children }) {
   return (
     <div className="flex flex-col">
       {bellekteTutulanNavbar}
-      <main className='min-h-screen'>
+      <main className='min-h-screen mx-5'>
         {children}
         <Outlet />
       </main>
@@ -18,3 +18,4 @@ export function Layout({ children }) {
     </div>
   );
 };
+      

@@ -5,7 +5,12 @@ module.exports = {
   ],
 
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary:'#59cae8',//MAVİ
+        secondary:'#bdbdbd' // gri
+      },
+    },
     screens: {
       'sm': {'min': '0', 'max': '767px'},
       // => @media (min-width: 640px and max-width: 767px) { ... }
