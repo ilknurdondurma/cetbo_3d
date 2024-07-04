@@ -5,7 +5,6 @@ import { useAuth } from '../../context/authContext/authContext';
 
 function Home() {
 
-
   useEffect(() => {
     scrollRevealConfig();
   }, []);

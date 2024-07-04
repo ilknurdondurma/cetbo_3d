@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       colors: {
         primary:'#59cae8',//MAVİ
-        secondary:'#bdbdbd' // gri
+        secondary:'#9ca3af' // gri
       },
     },
     screens: {

@@ -6,12 +6,13 @@ import SignUp from '../pages/signup'
 import About from '../pages/about'
 
 import Contact from '../pages/contact'
-import Baski3D from '../pages/3d-baski'
-import Tarama3D from '../pages/3d-tarama'
+import Blog from '../pages/blog'
 import Fdm from '../pages/fdm'
 import Sla from '../pages/sla'
 import {Layout} from "../layout";
 import Propose from "../pages/propose";
+import PageNotFound from "../pages/404";
+import Baski3D from "../pages/3d-baski";
 
 
 const routes = createBrowserRouter([
@@ -40,14 +41,11 @@ const routes = createBrowserRouter([
                 path: '/contact',
                 element: <Contact/>
             },
-            {
-                path: '/3d-baski',
-                element: <Baski3D/>
+            { 
+                path: '/blog',
+                element: <Blog/>
             },
-            {
-                path: '/3d-tarama',
-                element: <Tarama3D/>
-            },
+            
             {
                 path: '/fdm',
                 element: <Fdm/>
@@ -59,6 +57,14 @@ const routes = createBrowserRouter([
             {
                 path: '/propose',
                 element: <Propose/>
+            },
+            {
+                path: '/3d-baski',
+                element: <Baski3D/>
+            },
+            {
+                path:'*',
+                element: <PageNotFound/>
             },
            
         ]
