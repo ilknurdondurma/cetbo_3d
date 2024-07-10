@@ -16,10 +16,10 @@ export const navbarElements=[
         name:'SLA',
         path:'/sla'
     },
-    {
-        name:'3D Baskı',
-        path:'/3d-baski'
-    },
+    // {
+    //     name:'3D Baskı',
+    //     path:'/3d-baski'
+    // },
     {
         name:'Hakkımızda',
         path:'/about'
@@ -27,6 +27,10 @@ export const navbarElements=[
     {
         name:'İletişim',
         path:'/contact'
+    },
+    {
+        name:'TEKLİF AL',
+        path:'/propose'
     },
     
 ]

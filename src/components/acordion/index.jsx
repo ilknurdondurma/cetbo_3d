@@ -12,7 +12,7 @@ function Acordion({props}) {
         }));
     };
   return (
-    <div className='grid grid-cols-3 sm:grid-cols-1 gap-5 mx-auto'>
+    <div className='mx-auto'>
       {props.map((tech, techIndex) => (
                 <div key={techIndex}>
                     <h2 className='text-2xl font-semibold my-4'>{tech.teknologies}</h2>

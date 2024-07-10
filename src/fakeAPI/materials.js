@@ -1,0 +1,22 @@
+export const material=[
+    {
+        id:1,
+        name:"PLA"
+    },
+    {
+        id:2,
+        name:"ABS"
+    },
+    {
+        id:3,
+        name:"PVC"
+    },
+    {
+        id:4,
+        name:"PETG"
+    },
+    {
+        id:5,
+        name:"Nylon"
+    }
+]

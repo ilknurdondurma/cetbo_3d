@@ -1,0 +1,8 @@
+export const slaInfo=[
+    {
+        title:'SLA Baskı Örneklerimiz',
+        subTitle:'Stereolitografi (SLA)',
+        description:'3D baskı teknolojilerinden biridir ve UV ışığı ile sıvı reçinelerin polimerleştirilmesi yoluyla nesnelerin üretilmesini sağlar.',
+        content:"Stereolitografi (SLA), 3D baskı teknolojilerinden biridir ve UV ışığı ile sıvı reçinelerin polimerleştirilmesi yoluyla nesnelerin üretilmesini sağlar. Bu teknoloji, yüksek detaylı ve hassas parçaların üretimi için idealdir. SLA'da, 3D model, özel bir reçine tankının içine indirilir ve UV lazer veya diğer UV kaynağı, reçineyi katman katman polimerleştirerek istenen şekli oluşturur.SLA baskıda, her katman tamamlandığında platform bir sonraki katmana indirilir ve süreç tekrarlanır. Bu yöntem, ince detaylar, pürüzsüz yüzeyler ve karmaşık geometrili parçaların üretimi için son derece etkilidir. SLA'nın kullanıldığı endüstriler arasında sağlık, otomotiv, takı ve prototipleme bulunur.SLA'nın avantajları arasında yüksek çözünürlük, mükemmel detaylar, pürüzsüz yüzeyler ve çeşitli reçine malzemeleri seçenekleri bulunur. Bu özellikler, SLA teknolojisini profesyonel tasarım ve mühendislik uygulamaları için tercih edilen bir seçenek haline getirir.Ancak SLA'nın bazı dezavantajları da vardır. Örneğin, baskı süreleri diğer teknolojilere göre daha uzun olabilir ve büyük hacimli parçaların üretimi maliyetli olabilir. Ayrıca, SLA baskılarının son kullanım amaçlarına göre sağlamlaştırılması gerekebilir.Sonuç olarak, FDM ve SLA gibi 3D baskı teknolojileri, farklı kullanım senaryolarına ve ihtiyaçlara göre avantajlar ve dezavantajlar sunar. Her biri, endüstriyel üretimden kişisel kullanıma kadar geniş bir uygulama yelpazesine sahiptir ve sürekli olarak geliştirilmektedir."
+    }
+]

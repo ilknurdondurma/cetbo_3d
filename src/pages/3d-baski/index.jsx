@@ -6,6 +6,7 @@ import Acordion from '../../components/acordion';
 import Table from '../../components/table';
 import backgroundImage from '../../assets/3d_object.png';
 import { AnimateContainer } from 'react-animate-container';
+import {BaskiInfo} from '../../helpers/text/3d-baski'
 
 function SSS() {
     const [sorular, setSorular] = useState(sorularData);
@@ -24,8 +25,8 @@ function SSS() {
                 }}
             >
                 <div className='absolute inset-0 flex flex-col justify-center p-5'>
-                <AnimateContainer.fadeInLeft duration={0.3} active ><div className='text-4xl font-bold sm:text-md ' >3D Baskı Hizmeti</div></AnimateContainer.fadeInLeft>
-                <AnimateContainer.fadeInLeft duration={1} active ><div className='text-xl font-bold sm:sm-text-sm'>3D Baskı Hizmetimizden Faydalanarak Hemen Teklif Alın. </div></AnimateContainer.fadeInLeft>
+                <AnimateContainer.fadeInLeft duration={0.3} active ><div className='text-4xl font-bold sm:text-md ' >{BaskiInfo[0].title}</div></AnimateContainer.fadeInLeft>
+                <AnimateContainer.fadeInLeft duration={1} active ><div className='text-xl font-bold sm:sm-text-sm'>{BaskiInfo[0].subTitle} </div></AnimateContainer.fadeInLeft>
                 </div>
             </div>
             <div className='w-4/5 mx-auto overflow-y-scroll'>

@@ -18,7 +18,7 @@ function Footer() {
         <div className='flex p-3 gap-2 text-lg'><FaEnvelope size={25} color='black' /><span className='md:hidden sm:hidden'>{contacts[0]["email"]}</span></div>
         <div className='flex p-3 gap-2 text-lg'><FaPhone size={25} color='black'/> <span className='md:hidden sm:hidden'>{contacts[0]["phone"]}</span></div>
       </div>
-      <div className='col-span-1 flex justify-center items-center gap-5'>
+      <div className='col-span-1 flex justify-center items-center gap-5 sm:gap-1'>
         <a href="/" className="text-blue-700">
           <FaFacebook size={24} />
         </a>
