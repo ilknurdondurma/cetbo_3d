@@ -19,13 +19,13 @@ function Navigation() {
                       <div className="flex justify-center items-center gap-3 font-bold"><SiD3Dotjs size={40} />CETBO</div>
                         {navbarElement.map((element, index ) => {
                           return <NavLink to={`${element.path}`} key={index} >
-                            <div key={index} className={`${responsiveClass} ${hover} m-2 p-2 text-lg ${element.path==='/propose' ? 'border-2 border-black border-dotted bg-primary/40' :'border-2 border-transparent'} ${active === index ? ' bg-primary/80 rounded-lg p-2' : ''}`} onClick={() => setActive(index)}>
+                            <div key={index} className={`${responsiveClass} ${hover} m-2 p-2 text-lg  ${element.path==='/propose' ? 'border-2 border-black border-dotted bg-primary/40' :'border-2 border-transparent'} ${active === index ? ' bg-primary/80 rounded-lg p-2' : ''}`} onClick={() => setActive(index)}>
                                 {element.name}
                               </div>
                           </NavLink>;
                         })}
                   </div>
-                  <span className='hover:shadow-md hover:shadow-white self-center sm:self-start sm:px-5 sm:py-5 hidden sm:flex sm:gap-2 sm:text-primary/80 sm:font-bold' onClick={toggleSidebar}>
+                  <span className='hover:shadow-md hover:shadow-white self-center sm:self-start sm:px-5 sm:py-3 hidden sm:flex sm:gap-2 sm:text-primary/80 sm:font-bold' onClick={toggleSidebar}>
                       <GiHamburgerMenu color='#59cae8' size="30px"/> Menü
                   </span>
                   <div className='hidden sm:block bg-primary z-10 w-full h-auto'>
@@ -45,7 +45,7 @@ function Navigation() {
     )
   }
   
-  const responsiveClass="md:text-sm sm:text-sm lg-text-md gap-2 "
+  const responsiveClass="md:text-xs sm:text-sm lg:text-md gap-2 "
   const hover="hover:bg-primary/60 rounded-lg"
 
   export default Navigation

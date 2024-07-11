@@ -1,10 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from '../pages/home'
-import Login from '../pages/login'
 import SignUp from '../pages/signup'
-
 import About from '../pages/about'
-
 import Contact from '../pages/contact'
 import Blog from '../pages/blog'
 import Fdm from '../pages/fdm'
@@ -13,6 +10,9 @@ import {Layout} from "../layout";
 import Propose from "../pages/propose";
 import PageNotFound from "../pages/404";
 import Baski3D from "../pages/3d-baski";
+import Order from "../pages/order";
+import Login from "../pages/login";
+import Admin from "../pages/admin";
 
 
 const routes = createBrowserRouter([
@@ -24,13 +24,18 @@ const routes = createBrowserRouter([
                 index:true,
                 element: <Home/>
             },
+            
+            {
+                path: '/signup',
+                element: <SignUp/>
+            },
             {
                 path: '/login',
                 element: <Login/>
             },
             {
-                path: '/signup',
-                element: <SignUp/>
+                path: '/admin',
+                element: <Admin/>
             },
             
             {
@@ -61,6 +66,10 @@ const routes = createBrowserRouter([
             {
                 path: '/3d-baski',
                 element: <Baski3D/>
+            },
+            {
+                path: '/order',
+                element: <Order/>
             },
             {
                 path:'*',

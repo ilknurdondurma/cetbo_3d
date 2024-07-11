@@ -19,7 +19,7 @@ function Navbar() {
   return (
     <div className='h-auto flex flex-col justify-center bg-secondary/40 mt-20'>
 
-        <div className={`p-5 relative ${location.pathname==='/' ? "block" :" hidden"} `}
+        <div className={`p-5 relative ${location.pathname==='/'  ? "block" :" hidden"} `}
           style={{
             backgroundImage: `url(${backgroundImage})`,
             backgroundSize: 'cover',

@@ -17,8 +17,8 @@ export const BaskiInfo=[
         content4:"Yüklediğiniz model için en uygun baskı ücretini alırsınız.Yüklediğiniz model için en uygun baskı ücretini alırsınız.",
 
 
-        header5:"",
-        content5:"",
+        header5:"Zaten Bir Siparişiniz Var Mı ?",
+        content5:"Vermiş oldğunuz sipariş durumunu kontrol etmek için hemen TIKLAYIN.",
 
     }
 ]

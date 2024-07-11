@@ -3,6 +3,7 @@ import { FaQuestionCircle } from "react-icons/fa";
 import { FaTruckFast } from "react-icons/fa6";
 import { MdLocalOffer } from "react-icons/md";
 import { MdAccessTimeFilled } from "react-icons/md";
+import { ImCart } from "react-icons/im";
 import { sorularData } from "../../fakeAPI/sorular";
 import { color } from "../../fakeAPI/colors";
 import { material } from "../../fakeAPI/materials";
@@ -12,38 +13,16 @@ import { AnimateContainer } from "react-animate-container";
 import { BaskiInfo } from "../../helpers/text/3d-baski";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import {validationSchema} from '../../validations/file';
+import { NavLink } from "react-router-dom";
 
 function Propose() {
   const [sorular, setSorular] = useState(sorularData);
   const [colorOptions, setColorOptions] = useState(color);
   const [materialOptions, setMaterialOptions] = useState(material);
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    file: null,
-    specialRequest: "",
-  });
+ 
+  const handleSubmit = (values) => {
+    console.log(values);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleFileChange = (e) => {
-    setFormData({
-      ...formData,
-      file: e.target.files[0],
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
   };
 
   return (
@@ -78,10 +57,20 @@ function Propose() {
       </div>
      
       {/* cardlar */}
-      <div className="grid grid-cols-3 sm:grid-cols-1 place-items-center  gap-10 m-10 ">
+      <div className="grid grid-cols-4 md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 place-items-center  gap-20 m-10 ">
         <Card icon={<FaTruckFast size={40} color="#59cae8"/>} title={BaskiInfo[0]['header2']} description={BaskiInfo[0]['content2']} />
-        <Card icon={<MdLocalOffer size={40} color="#59cae8"/>} title={BaskiInfo[0]['header4']} description={BaskiInfo[0]['content4']} />
         <Card icon={<MdAccessTimeFilled size={40} color="#59cae8"/>} title={BaskiInfo[0]['header3']} description={BaskiInfo[0]['content3']} />
+        <Card icon={<MdLocalOffer size={40} color="#59cae8"/>} title={BaskiInfo[0]['header4']} description={BaskiInfo[0]['content4']} />
+        <NavLink to={'/order'} className={'border-2 border-dotted border-primary'}>
+            <Card 
+              icon={
+                <AnimateContainer.bounce duration={0.5} active iterationCount={10}>
+                  <ImCart size={40} color="#59cae8"/>
+                </AnimateContainer.bounce>
+                    } 
+              title={BaskiInfo[0]['header5']} 
+              description={BaskiInfo[0]['content5']}/>
+        </NavLink>
       </div>
 
       {/* dosya */}
@@ -100,13 +89,12 @@ function Propose() {
             color: '',
             quantity: 1
           }}
-          onSubmit={(values, { setSubmitting }) => {
-            console.log(values);
-            setSubmitting(false);
+          onSubmit={(values, {  }) => {
+            handleSubmit(values);
           }}
           validationSchema={validationSchema}
         >
-          {({ setFieldValue, isSubmitting, values }) => (
+          {({ setFieldValue, values }) => (
             <Form>
               <div className="mb-4 gap-5 grid grid-cols-6">
                 <label className="block text-gray-700 text-md font-bold mb-2" htmlFor="firstName">
@@ -183,7 +171,7 @@ function Propose() {
                 <Field as="select" name="material" id="material" className="col-span-5 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                   <option value="" label="Seçiniz" />
                   {materialOptions.map((option, index) => (
-                    <option key={index} value={option.id}>{option.name}</option>
+                    <option key={index} value={option.name}>{option.name}</option>
                   ))}
                 </Field>
                 <ErrorMessage name="material" component="div" className="text-red-500 text-xs italic" />
@@ -195,7 +183,7 @@ function Propose() {
                 <Field as="select" name="color" id="color" className="col-span-5 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                   <option value="" label="Seçiniz" />
                   {colorOptions.map((option, index) => (
-                    <option key={index} value={option.id}>{option.color}</option>
+                    <option key={index} value={option.name}>{option.color}</option>
                   ))}
                 </Field>
                 <ErrorMessage name="color" component="div" className="text-red-500 text-xs italic" />
@@ -246,7 +234,6 @@ function Propose() {
                 <button
                   type="submit"
                   className="bg-primary w-full hover:bg-cyan-300 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                  disabled={isSubmitting}
                 >
                   Gönder
                 </button>

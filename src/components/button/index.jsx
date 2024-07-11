@@ -23,7 +23,7 @@ export default function Button({ variant,size,children,as,className,onClick, ...
   
   Button.propTypes = {
     children: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
-    variant: PropTypes.oneOf(['Priamry','Secondary']),
+    variant: PropTypes.oneOf(['Primary','Secondary']),
     size: PropTypes.oneOf(['Normal', 'Small']),
     as: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     props: PropTypes.object,

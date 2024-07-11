@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-function Table({ props }) {
+function Table({ props, className }) {
     const headers = Object.keys(props[0]);
 
     return (
         <div>
-            <table className='w-full table-auto border-collapse border border-gray-300'>
+            <table className={`${className} w-full table-auto border-collapse border border-gray-300`}>
                 <thead>
                     <tr className='bg-primary/60'>
                         {headers.map((header, index) => (
@@ -19,7 +19,12 @@ function Table({ props }) {
                     {props.map((item, index) => (
                         <tr key={index} className='hover:bg-gray-100'>
                             {Object.values(item).map((value, valueIndex) => (
-                                <td key={valueIndex} className='border border-gray-300 px-4 py-2'>{value}</td>
+                                <td 
+                                    key={valueIndex} 
+                                    className={`border border-gray-300 px-4 py-2 ${value === "" ? 'bg-red-400' : ''}`}
+                                >
+                                    {value !== null ? value : 'N/A'}
+                                </td>
                             ))}
                         </tr>
                     ))}
@@ -29,4 +34,4 @@ function Table({ props }) {
     )
 }
 
-export default Table
+export default Table;

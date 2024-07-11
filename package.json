@@ -26,6 +26,7 @@
     "redux": "^5.0.1",
     "redux-thunk": "^3.1.0",
     "scrollreveal": "^4.0.9",
+    "spinners-react": "^1.0.7",
     "web-vitals": "^2.1.4",
     "yup": "^1.4.0"
   },
